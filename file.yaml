@@ -1,0 +1,18 @@
+---
+
+- name: Run file commands
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Create a directory
+      file:
+        path: /home/jmc/myfolder2
+        state: directory
+        owner: jmc
+        group: jmc
+
+    - name: Delete sample-template.bak file
+      file:
+        path: /home/jmc/sample-template.bak
+        state: absent
