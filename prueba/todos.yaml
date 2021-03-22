@@ -1,6 +1,6 @@
 ---
 
-- name: Basic playbook run locally
+- name: Basic playbook run all hosts
   gather_facts: true
   hosts: all  
   tasks:

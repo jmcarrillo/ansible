@@ -1,0 +1,19 @@
+---
+
+- name: Blockinfile to edit files
+  gather_facts: false
+  hosts: all
+  tasks:
+    - name: "Adding Ansible manager and managed nodes to /etc/hosts"
+      blockinfile:
+        name: /etc/hosts
+        block: |
+          # Manager
+          10.240.128.47	jmc-zombi
+
+          # Managed-1
+          10.240.128.44	emmanuel-zombi
+
+          # Managed-2
+          10.240.128.41	salvador-zombi
+        marker: "# {mark} ANSIBLE MANAGED BLOCK manager and managed nodes"
