@@ -7,12 +7,8 @@
   tasks:
     - name: Create a directory
       file:
-        path: /home/jmc/myfolder2
+        path: /home/jmc/myfolder3
         state: directory
         owner: jmc
         group: jmc
 
-    - name: Delete sample-template.bak file
-      file:
-        path: /home/jmc/sample-template.bak
-        state: absent
